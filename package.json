@@ -1,0 +1,24 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "This is a discord bot that will help to track issues on github repo.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CommunityOfCoders/DiscordBot.git"
+  },
+  "author": "COC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CommunityOfCoders/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/CommunityOfCoders/DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
