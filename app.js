@@ -37,7 +37,6 @@ client.on('message', (msg) => {
   if (msg.author.bot || !msg.content.startsWith(prefix)) return;
 
   args = msg.content.slice(prefix.length).trim().split(/ +/);
-  // ["hello", "Saif"]
   command = args.shift().toLowerCase();
 
   if (!client.commands.get(command)) {
@@ -52,16 +51,9 @@ client.on('message', (msg) => {
     console.log(error);
     return msg.channel.send("There was an error executing the command");
   }
-
-
-  // if (command === "hello"){
-  //   return msg.reply(`Hello, ${args[0]}`);
-  // }
-  // if (command === )
 })
 
 client.on("githubMessage", (body) => {
-  console.log(body);
   const action = body.action;
   const issueUrl = body.issue.html_url;
   if (action === "opened") {
@@ -71,7 +63,6 @@ client.on("githubMessage", (body) => {
 })
 
 app.post("/github", (req, res) => {
-  // Do something here.
   client.emit("githubMessage", req.body);
   return res.status(200).json({ success: true });
 })
